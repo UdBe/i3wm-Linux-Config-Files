@@ -70,6 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -97,20 +98,18 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias iconf="nvim ~/.config/i3/config"
-alias zconf="nvim ~/.zshrc && source ~/.zshrc"
+alias iconf="nano ~/.config/i3/config"
+alias zconf="nano ~/.zshrc && source ~/.zshrc"
 
-alias whatsapp="brave-browser https://web.whatsapp.com/"
+alias whatsapp="brave https://web.whatsapp.com/"
 alias dsa="bash CustomCommands/DSA_Workflow.sh > /dev/null 2>&1 & disown ; exit "
 alias earbuds="bluetoothctl connect 48:D8:45:F2:80:DF"
 
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-neofetch
+neofetch --ascii_distro archlinux
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/uday/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -122,4 +121,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-conda deactivate
