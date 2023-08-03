@@ -43,7 +43,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 #####################################
 #KeyBindings
-bindsym $mod+b exec brave
+bindsym $mod+b exec brave-browser
 bindsym $mod+c exec code
 bindsym $mod+p exec pycharm-professional
 bindsym $mod+Shift+s exec gnome-control-center
@@ -62,6 +62,9 @@ default_floating_border pixel 1
 #smart_gaps on 
 #gaps inner 5 
 #gaps outer 5 
+
+#TouchPad tap to click
+exec xinput set-prop "DELL0A7D:00 06CB:CE26 Touchpad" 346 1
 
 
 #####################################
@@ -212,7 +215,7 @@ bindsym $mod+r mode "resize"
 bar {
 	tray_output none
         status_command /home/uday/.local/bin/bumblebee-status \
-	-m git cpu memory disk spacer deezer date time spacer brightness bluetooth2 pulseout spacer battery spacer \
-	-p  spacer.text="               " disk.format="{left}({percent:2.0f}%)" time.format="%-I:%M %p" date.format="%A,%d %B %Y" pulsectl.percent_change=5% pulsectl.autostart="true" pulsectl.limit="100%" pulsectl.showbars="true" \
+	-m spacer git cpu memory disk deezer date time brightness bluetooth2 pulseout battery spacer spacer spacer \
+	-p  spacer.text="         " disk.format="{left}({percent:2.0f}%)" time.format="%-I:%M %p" date.format="%A,%d %B %Y" pulsectl.percent_change=5% pulsectl.autostart="true" pulsectl.limit="100%" pulsectl.showbars="true" \
         -t gruvbox 
 }
